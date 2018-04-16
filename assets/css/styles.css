@@ -42,11 +42,13 @@ header > p{
 /*. main */
 main{
     width: auto;
-    height: 50vh;
+    height: auto;
     background-color: white;
     margin: 7.5% 15% 7.5% 15%;
     border-radius: 5px;
     text-align: center;
+    display: block;
+    padding-bottom: 2%;
 }
 h2{
     letter-spacing: 0.5rem;
@@ -58,20 +60,65 @@ main > p{
     margin: 4% 10% 4% 10%;
 }
 
-main > button{
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: white;
-    width: 20%;
-    height: 13%;
-    margin: 0 auto;
-}
 main > button:hover{
     transition-duration: 1s;
     border-color: red;
     color: red;
 }
+/*FORM IN DE MAIN*/
+span{
+    color: red;
+}
+form > input{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #ccc;
+    background-color: lightgray;
+    border-radius: 4px;
+    box-sizing: border-box;
 
+}
+input[type=submit] {
+    width: 80%;
+    background-color: black;
+    color: white;
+    padding: 14px 20px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: white;
+    color: black;
+    transition-duration: 1s;
+}
+/*TABLE*/
+#namen {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#namen td, #namen th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#namen tr:nth-child(even){background-color: #f2f2f2;}
+
+#namen tr:hover {background-color: #ddd;}
+
+#namen th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: black;
+    color: white;
+}
 /*Aside */
 aside{
     margin: 0.5% 15% 0% 13.5%;
@@ -163,28 +210,48 @@ img:hover{
 footer{
     position: relative;
     margin: 0 auto;
-    top: 550px;
+    bottom: 0;
     display: block;
+    text-align: center;
 }
 
-.footertext {
-text-align: center;
+footer > p{
+    text-align: center;
+    margin: 0 auto;
+}
+
+footer > p > a{
+    text-align: center;
 }
 
 
 /* media querries */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+    header{
+        height: 15vh;
+        width: auto;
+    }
+
     main{
         width: 100%;
         margin: 0;
+    }
+    h1{
+        position: relative;
+        bottom: 15vh;
+    }
+    p{
+        position: relative;
+        bottom: 15vh;
     }
     aside{
         width: 100%;
         margin: 0;
     }
     .gallery{
-        margin: 5%;
+        margin-top: 10px;
+        width: 90%;
         display: inline;
     }
 }
